@@ -3,8 +3,6 @@ class Solution:
         # what I think is first we can create a list and add each element to a list and when the hashtag is present we can just pop the last element 
         stackA = []
         stackB = []
-        testA=""
-        testB=""
         for i in range(len(s)):
             if s[i]=="#":
                 if stackA:
@@ -17,10 +15,7 @@ class Solution:
                     stackB.pop()
             else:
                 stackB.append(i)
-        for i in stackA:
-            testA += i
-        for i in stackB:
-            testB += i
-        return testA == testB
+        
+        return stackA == stackB
             
 
